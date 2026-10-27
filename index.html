@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:title" content="Mohammad Umair">
+<meta property="og:description" content="Computer Engineering co-op student at TMU building data pipelines, cloud tooling and AI assistants.">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://mohdumair0110lucknavi.github.io/">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Mohammad Umair","url":"https://mohdumair0110lucknavi.github.io/","jobTitle":"Computer Engineering Co-op Student","alumniOf":{"@type":"CollegeOrUniversity","name":"Toronto Metropolitan University"},"address":{"@type":"PostalAddress","addressLocality":"Mississauga","addressRegion":"ON","addressCountry":"CA"},"sameAs":["https://github.com/mohdumair0110lucknavi"]}</script>
+<title>Mohammad Umair | Computer Engineering Student, Toronto</title>
+<meta name="description" content="Mohammad Umair, Computer Engineering co-op student at Toronto Metropolitan University. Data engineering, cloud and AI tooling projects, work experience and interests.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: single left-aligned column, mono "status line" hero, timeline for work, 2-col project grid that stacks on phones */
+:root{
+  --bg:#F5F7FA; --surface:#FFFFFF; --ink:#111827; --muted:#5B6474; --line:#DCE2EA;
+  --accent:#0E62C9; --accent-soft:#E3EEFB; --live:#0F7B4E; --live-soft:#DFF3EA; --wip:#9A5B00; --wip-soft:#FBEFD9;
+  --display:"Bricolage Grotesque",ui-sans-serif,system-ui,sans-serif;
+  --body:"IBM Plex Sans",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0D1117; --surface:#151B24; --ink:#E8EDF4; --muted:#9AA6B6; --line:#263040;
+  --accent:#5EA2FF; --accent-soft:#16294A; --live:#4CC38A; --live-soft:#123326; --wip:#F0B45A; --wip-soft:#3A2A10; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0D1117; --surface:#151B24; --ink:#E8EDF4; --muted:#9AA6B6; --line:#263040;
+  --accent:#5EA2FF; --accent-soft:#16294A; --live:#4CC38A; --live-soft:#123326; --wip:#F0B45A; --wip-soft:#3A2A10; color-scheme:dark}
+
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.6;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+a{color:var(--accent);text-underline-offset:3px}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:860px;margin:0 auto;padding-block:40px 64px;display:flex;flex-direction:column;gap:64px}
+
+nav{display:flex;flex-wrap:wrap;gap:6px 20px;font-family:var(--mono);font-size:13px}
+nav a{color:var(--muted);text-decoration:none}
+nav a:hover{color:var(--accent)}
+
+.hero{display:flex;flex-direction:column;gap:18px}
+.status{font-family:var(--mono);font-size:13px;color:var(--muted);display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--live);box-shadow:0 0 0 4px var(--live-soft)}
+h1{font-family:var(--display);font-weight:800;font-size:clamp(2.6rem,8vw,4.6rem);line-height:1;letter-spacing:-.03em;margin:0;text-wrap:balance}
+.lede{font-size:1.15rem;max-width:60ch;margin:0;color:var(--ink)}
+.lede em{font-style:normal;color:var(--accent);font-weight:500}
+.links{display:flex;flex-wrap:wrap;gap:10px}
+.btn{font-family:var(--mono);font-size:13px;padding:9px 14px;border:1px solid var(--line);border-radius:6px;background:var(--surface);color:var(--ink);text-decoration:none;cursor:pointer}
+.btn:hover{border-color:var(--accent);color:var(--accent)}
+.btn.primary{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.btn.primary:hover{background:var(--accent);border-color:var(--accent);color:#fff}
+
+section{display:flex;flex-direction:column;gap:24px;scroll-margin-top:24px}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:0}
+h2{font-family:var(--display);font-weight:700;font-size:clamp(1.6rem,4vw,2.1rem);letter-spacing:-.02em;margin:4px 0 0;line-height:1.15}
+
+/* timeline */
+.timeline{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:32px;border-left:2px solid var(--line);padding-left:24px}
+.job{position:relative;display:flex;flex-direction:column;gap:8px}
+.job::before{content:"";position:absolute;left:-31px;top:8px;width:12px;height:12px;border-radius:50%;background:var(--bg);border:2px solid var(--accent)}
+.job-head{display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 16px;align-items:baseline}
+.job h3{font-family:var(--display);font-weight:700;font-size:1.25rem;margin:0;letter-spacing:-.01em}
+.when{font-family:var(--mono);font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
+.org{color:var(--muted);margin:0;font-weight:500}
+.job ul{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;max-width:68ch}
+
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin:0;padding:0;list-style:none}
+.tags li{font-family:var(--mono);font-size:12px;padding:3px 8px;border-radius:4px;background:var(--accent-soft);color:var(--accent)}
+
+/* projects */
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:20px;display:flex;flex-direction:column;gap:12px;min-width:0}
+.card-top{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}
+.card h3{font-family:var(--display);font-weight:700;font-size:1.15rem;margin:0;line-height:1.25}
+.card p{margin:0;color:var(--muted);font-size:15px}
+.card .tags{margin-top:auto}
+.pill{flex:none;font-family:var(--mono);font-size:11px;padding:3px 8px;border-radius:99px;white-space:nowrap}
+.pill.live{background:var(--live-soft);color:var(--live)}
+.pill.wip{background:var(--wip-soft);color:var(--wip)}
+.card a.more{font-family:var(--mono);font-size:13px}
+.card.feature{grid-column:1/-1}
+.layers{display:flex;gap:6px;font-family:var(--mono);font-size:12px;flex-wrap:wrap}
+.layers span{padding:4px 10px;border-radius:4px;border:1px solid var(--line)}
+.layers .on{border-color:var(--accent);color:var(--accent)}
+
+/* education + skills */
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px}
+.two > div{min-width:0;display:flex;flex-direction:column;gap:10px}
+.two h3{font-family:var(--display);font-size:1.1rem;margin:0}
+.two p{margin:0}
+.facts{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+.facts li{display:flex;gap:10px}
+.facts b{font-weight:600}
+.skillrow{display:flex;flex-direction:column;gap:6px}
+.skillrow span{font-family:var(--mono);font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.1em}
+
+/* hobbies */
+.hobbies{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 32px}
+.hobby{border-top:2px solid var(--ink);padding-top:12px;display:flex;flex-direction:column;gap:4px;min-width:0}
+.hobby h3{font-family:var(--display);font-size:1.1rem;margin:0}
+.hobby p{margin:0;color:var(--muted);font-size:15px}
+
+.contact{background:var(--ink);color:var(--bg);border-radius:12px;padding:32px 24px;display:flex;flex-direction:column;gap:14px}
+.contact h2{color:var(--bg)}
+.contact p{margin:0;max-width:55ch;opacity:.85}
+.mail{font-family:var(--mono);font-size:clamp(1rem,3.5vw,1.3rem);user-select:all;word-break:break-all}
+.contact .btn{background:transparent;color:var(--bg);border-color:color-mix(in srgb,var(--bg) 35%,transparent)}
+.contact .btn:hover{border-color:var(--bg);color:var(--bg)}
+footer{font-family:var(--mono);font-size:12px;color:var(--muted)}
+
+@media (max-width:640px){
+  .grid,.two{grid-template-columns:minmax(0,1fr)}
+  .hobbies{grid-template-columns:minmax(0,1fr)}
+  .wrap{gap:52px;padding-block:24px 48px}
+}
+@media (prefers-reduced-motion:no-preference){.dot{animation:pulse 2.4s ease-in-out infinite}}
+@keyframes pulse{50%{box-shadow:0 0 0 7px transparent}}
+</style>
+</head>
+<body>
+
+
+<div class="wrap">
+  <nav aria-label="Sections">
+    <a href="#work">work</a><a href="#projects">projects</a><a href="#education">education</a><a href="#interests">interests</a><a href="#contact">contact</a>
+  </nav>
+
+  <header class="hero">
+    <p class="status"><span class="dot" aria-hidden="true"></span>Network Operations Intern at Ericsson · Toronto, ON</p>
+    <h1>Mohammad Umair</h1>
+    <p class="lede">Computer Engineering co-op student at Toronto Metropolitan University with experience across <em>data analytics</em>, <em>generative AI</em>, <em>cloud</em> and <em>telecom operations</em>. I like building technology that solves real business problems, and I'm looking for data and software co-op roles starting May 2027.</p>
+    <div class="links">
+      <a class="btn primary" href="#contact">Get in touch</a>
+      <a class="btn" href="https://github.com/mohdumair0110lucknavi" target="_blank" rel="noopener">GitHub ↗</a>
+      <a class="btn" href="#projects">See projects</a>
+    </div>
+  </header>
+
+  <section id="work" aria-labelledby="work-h">
+    <div><p class="eyebrow">Experience</p><h2 id="work-h">Where I've worked</h2></div>
+    <ol class="timeline">
+      <li class="job">
+        <div class="job-head"><h3>Network Operations Intern</h3><span class="when">Sep 2026 – Present</span></div>
+        <p class="org">Ericsson Canada · Network Operations & Digitalization · Toronto</p>
+        <ul>
+          <li>Track operations and delivery data in Excel and support KPI reporting for Operations Management reviews; starting dashboard work with the Power BI team.</li>
+          <li>Coordinate work orders, quotations, purchase orders and site requests between Ericsson, a major Canadian carrier and external partners, from request to delivery.</li>
+          <li>Manage Site Acceptance Reports, procurement documents and stakeholder follow-ups to keep project records accurate and on schedule.</li>
+          <li>Handle IT access requests, onboarding and support escalations across internal and customer teams.</li>
+        </ul>
+        <ul class="tags"><li>Excel</li><li>KPI Reporting</li><li>Power BI</li><li>Project Coordination</li><li>4G/5G RAN</li></ul>
+      </li>
+      <li class="job">
+        <div class="job-head"><h3>Developer Intern</h3><span class="when">Jun – Aug 2026</span></div>
+        <p class="org">Momentum Financial Services Group (Money Mart) · Software Development · Mississauga</p>
+        <ul>
+          <li>Built an AI-powered Microsoft Excel add-in with React, JavaScript, Office.js and REST APIs.</li>
+          <li>Built and tested 10+ skills for Ask Momentum, an internal agentic AI and RAG platform, covering prompt validation, API tuning and performance analysis.</li>
+          <li>Worked with AWS, Terraform, IAM/OIDC and CI/CD pipelines for cloud deployment.</li>
+          <li>Maintained code quality using GitHub, SonarQube, Jira and Confluence.</li>
+        </ul>
+        <ul class="tags"><li>React</li><li>Office.js</li><li>AWS</li><li>Terraform</li><li>RAG</li><li>SonarQube</li></ul>
+      </li>
+    </ol>
+  </section>
+
+  <section id="projects" aria-labelledby="proj-h">
+    <div><p class="eyebrow">Projects</p><h2 id="proj-h">Things I've built</h2></div>
+    <div class="grid">
+      <article class="card feature">
+        <div class="card-top"><h3>Canadian Economy Data Pipeline</h3><span class="pill wip">In progress</span></div>
+        <p>A Python pipeline that pulls the USD/CAD exchange rate and policy rate from the Bank of Canada, plus CPI, unemployment and the New Housing Price Index from Statistics Canada, and lands them in a Bronze layer. Silver and Gold layers and a cloud deployment are next.</p>
+        <div class="layers" aria-label="Pipeline stages"><span class="on">Bronze ✓</span><span>Silver</span><span>Gold</span><span>Cloud</span></div>
+        <ul class="tags"><li>Python</li><li>REST APIs</li><li>Git</li></ul>
+        <a class="more" href="https://github.com/mohdumair0110lucknavi/canada-econ-pipeline" target="_blank" rel="noopener">View on GitHub ↗</a>
+      </article>
+      <article class="card">
+        <div class="card-top"><h3>Retail Data Lakehouse</h3><span class="pill wip">In progress</span></div>
+        <p>Team project: a Bronze/Silver/Gold lakehouse for a fictional retail chain, modelled as a star schema with a Streamlit dashboard on top.</p>
+        <ul class="tags"><li>Python</li><li>DuckDB</li><li>MotherDuck</li><li>Streamlit</li></ul>
+      </article>
+      <article class="card">
+        <div class="card-top"><h3>Network Operations Intelligence</h3><span class="pill live">Done</span></div>
+        <p>A Power BI dashboard for network KPIs built from a synthetic dataset, with DAX measures for incident and deployment tracking.</p>
+        <ul class="tags"><li>Power BI</li><li>DAX</li></ul>
+      </article>
+      <article class="card">
+        <div class="card-top"><h3>Network Deployment Tracker</h3><span class="pill live">Done</span></div>
+        <p>An Excel workbook with formula-driven status logic, built with XLOOKUP, SUMIFS, COUNTIFS, pivot tables and conditional formatting.</p>
+        <ul class="tags"><li>Excel</li><li>Pivot tables</li></ul>
+      </article>
+      <article class="card">
+        <div class="card-top"><h3>Bookstore Manager</h3><span class="pill live">Done</span></div>
+        <p>A desktop bookstore management app in Java with a JavaFX interface.</p>
+        <ul class="tags"><li>Java</li><li>JavaFX</li><li>OOP</li></ul>
+      </article>
+      <article class="card">
+        <div class="card-top"><h3>HCS12 Robot</h3><span class="pill live">Done</span></div>
+        <p>A robot programmed in HCS12 assembly as part of a university embedded systems course.</p>
+        <ul class="tags"><li>Assembly</li><li>Embedded</li></ul>
+      </article>
+    </div>
+  </section>
+
+  <section id="education" aria-labelledby="edu-h">
+    <div><p class="eyebrow">Education & skills</p><h2 id="edu-h">Background</h2></div>
+    <div class="two">
+      <div>
+        <h3>Toronto Metropolitan University</h3>
+        <p>Computer Engineering (Co-op), Software Engineering stream, Economics minor</p>
+        <ul class="facts">
+          <li><b>Dean's List</b></li>
+          <li><b>AWS Certified Cloud Practitioner</b>&nbsp;· 2026</li>
+        </ul>
+      </div>
+      <div>
+        <div class="skillrow"><span>Languages</span><ul class="tags"><li>Python</li><li>JavaScript</li><li>TypeScript</li><li>SQL</li><li>Java</li><li>C</li></ul></div>
+        <div class="skillrow"><span>Tools</span><ul class="tags"><li>AWS</li><li>React</li><li>Git & GitHub</li><li>Power BI</li><li>Excel</li><li>Jira</li><li>Confluence</li></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="interests" aria-labelledby="int-h">
+    <div><p class="eyebrow">Outside work</p><h2 id="int-h">Interests</h2></div>
+    <div class="hobbies">
+      <div class="hobby"><h3>Technology</h3><p>Keeping up with new tools, AI and cloud, and trying things out in side projects.</p></div>
+      <div class="hobby"><h3>Swimming</h3><p>My favourite way to stay active and clear my head.</p></div>
+      <div class="hobby"><h3>Fitness</h3><p>Training regularly and keeping a routine around school and work.</p></div>
+      <div class="hobby"><h3>Gaming & PC building</h3><p>PC gaming, speccing parts, and a desk setup that works for both coding and play.</p></div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact" aria-labelledby="c-h">
+    <p class="eyebrow" style="color:inherit;opacity:.7">Contact</p>
+    <h2 id="c-h">Let's talk</h2>
+    <p>Open to software, data engineering and cloud co-op roles for May 2027. The fastest way to reach me is email.</p>
+    <span class="mail" id="mail">uumair@torontomu.ca</span>
+    <div class="links">
+      <button class="btn" id="copy" type="button">Copy email</button>
+      <a class="btn" href="https://github.com/mohdumair0110lucknavi" target="_blank" rel="noopener">GitHub ↗</a>
+    </div>
+  </section>
+
+  <footer>© 2026 Mohammad Umair · Mississauga, Ontario</footer>
+</div>
+
+<script>
+document.getElementById('copy').addEventListener('click', function(){
+  var b=this, t=document.getElementById('mail').textContent;
+  function done(){b.textContent='Copied';setTimeout(function(){b.textContent='Copy email'},1600)}
+  function fallback(){var r=document.createRange();r.selectNodeContents(document.getElementById('mail'));var s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='Selected, press copy'}
+  try{navigator.clipboard.writeText(t).then(done,fallback)}catch(e){fallback()}
+});
+</script>
+
+</body>
+</html>
